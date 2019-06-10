@@ -1,0 +1,10 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+
+#habitaciones img{
+  height: 300px;
+}
+
+.mySlidesSimple {display:none;}
+.mySlidesDoble {display:none;}
+.mySlidesTriple {display:none;}
+.mySlides4 {display:none;}

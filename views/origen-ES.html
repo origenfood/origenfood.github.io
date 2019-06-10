@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Origen Hostal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+
+  <link rel="icon" href="../images/favicon.png">
+
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkTBpndIe1Tj_BCZ6MI7A8uWHNqGAzyNI&callback=myMap"></script>-->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-red w3-mobile">Inicio</a>
+  <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Habitaciones</a>
+  <a href="#about" class="w3-bar-item w3-button w3-mobile">Nosotros</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contacto</a>
+  <a href="#reserva" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Reservar Ahora</a>
+</div>
+<!-- Header -->
+<header id="header" class="w3-display-container w3-content" style="max-width:1500px;">
+  <img class="w3-image" src="../images/fondo.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
+  <div id="reserva" class="w3-display-left w3-padding w3-col l6 m8">
+    <div class="w3-container w3-red">
+      <h2><img style="width: 20%;" src="../images/logo.png"></img>Origen Hostal</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half w3-margin-bottom">
+          <label><i class="fa fa-calendar-o"></i> Check In</label>
+          <input readonly id ="datepickerCI" class="w3-input w3-border" type="text" placeholder="DD MM AAAA" name="CheckIn" required>
+        </div>
+        <div class="w3-half">
+          <label><i class="fa fa-calendar-o"></i> Check Out</label>
+          <input readonly id ="datepickerCO" class="w3-input w3-border" type="text" placeholder="DD MM AAAA" name="CheckOut" required>
+        </div>
+      </div>
+      <button class="w3-button w3-dark-grey" onclick="consultarDisponibilidad()"><i class="fa fa-search w3-margin-right"></i>Ver disponibilidad</button>
+    </div>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1532px;">
+
+  <div class="w3-container w3-margin-top" id="rooms">
+    <h3>Habitaciones</h3>
+  </div>
+
+  <div id="habitaciones" class="w3-row-padding w3-padding-16">
+    <div class="w3-quarter w3-margin-bottom">
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlidesSimple" src="../images/simple/1.jpg" style="width:100%; display: block;">
+        <img class="mySlidesSimple" src="../images/simple/2.jpg" style="width:100%">
+        <img class="mySlidesSimple" src="../images/simple/3.jpg" style="width:100%">
+        <img class="mySlidesSimple" src="../images/simple/4.jpg" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivsSimple(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivsSimple(1)">&#10095;</button>
+      </div>
+
+      <div class="w3-container w3-white">
+        <h3>Habitación Sencilla</h3>
+        <h6 class="w3-opacity">desde $45.000 COP</h6>
+        <h6 class="w3-opacity">Desayuno incluido.</h6>
+        <p>Cama doble</p>
+        <p class="w3-large"> <i class="fa fa-wifi"></i></p>
+        <a href="#reserva"><button class="w3-button w3-block w3-black w3-margin-bottom">Agendar Habitación</button></a>
+      </div>
+    </div>
+
+    <div class="w3-quarter w3-margin-bottom">
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlidesDoble" src="../images/doble/1.jpg" style="width:100%; display: block;">
+        <img class="mySlidesDoble" src="../images/doble/2.jpg" style="width:100%">
+        <img class="mySlidesDoble" src="../images/doble/3.jpg" style="width:100%">
+        <img class="mySlidesDoble" src="../images/doble/4.jpg" style="width:100%">
+        <img class="mySlidesDoble" src="../images/doble/5.jpg" style="width:100%">
+        <img class="mySlidesDoble" src="../images/doble/6.jpg" style="width:100%">
+        <img class="mySlidesDoble" src="../images/doble/7.jpg" style="width:100%">
+        <img class="mySlidesDoble" src="../images/doble/8.jpg" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivsDbl(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivsDbl(1)">&#10095;</button>
+      </div>
+
+
+      <div class="w3-container w3-white">
+        <h3>Habitación Doble</h3>
+        <h6 class="w3-opacity">desde $40.000 COP</h6>
+        <h6 class="w3-opacity">Desayuno incluido.</h6>
+        <p>2 camas sencillas</p>
+        <p class="w3-large"> <i class="fa fa-wifi"></i></p>
+        <a href="#reserva"><button class="w3-button w3-block w3-black w3-margin-bottom">Agendar Habitación</button></a>
+      </div>
+    </div>
+
+    <div class="w3-quarter w3-margin-bottom">
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlidesTriple" src="../images/triple/1.jpg" style="width:100%; display: block;">
+        <img class="mySlidesTriple" src="../images/triple/2.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/3.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/4.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/5.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/6.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/7.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/8.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/9.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/10.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/11.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/12.jpg" style="width:100%">
+        <img class="mySlidesTriple" src="../images/triple/13.jpg" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
+      </div>
+
+      <div class="w3-container w3-white">
+        <h3>Habitación Triple</h3>
+        <h6 class="w3-opacity">desde $55.000 COP</h6>
+        <h6 class="w3-opacity">Desayuno incluido.</h6>
+        <p>1 cama doble - 2 camas sencillas</p>
+        <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-wifi"></i></p>
+        <a href="#reserva"><button class="w3-button w3-block w3-black w3-margin-bottom">Agendar Habitación</button></a>
+      </div>
+    </div>
+
+    <div class="w3-quarter w3-margin-bottom">
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlides4" src="../images/multiple/1.jpg" style="width:100%; display: block;">
+        <img class="mySlides4" src="../images/multiple/2.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/3.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/4.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/5.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/6.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/7.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/8.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/9.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/10.jpg" style="width:100%">
+        <img class="mySlides4" src="../images/multiple/11.jpg" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
+      </div>
+
+      <div class="w3-container w3-white">
+        <h3>Habitación Múltiple</h3>
+        <h6 class="w3-opacity">desde $30.000 COP</h6>
+        <h6 class="w3-opacity">Desayuno incluido.</h6>
+        <p>1 cama sencilla - 2 camarótes</p>
+        <p class="w3-large"><i class="fa fa-wifi"></i></p>
+        <a href="#reserva"><button class="w3-button w3-block w3-black w3-margin-bottom">Agendar Habitación</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" id="about">
+    <div class="w3-col l4 12">
+      <h3>Nuestro Hostal</h3>
+      <h6>Origen es un lugar confortable en pleno corazón de dinámicas universitarias y familiares de la ciudad de Manizales, localizados en el barrio Palermo contamos con una amplia variedad de acomodaciones todas pensadas para ofrecer espacios cómodos y tranquilos para su descanso. Adicionalmente origen Hostal se encuentra acompañado por Origen Restaurante, por tal motivo siempre está abierto el servicio de desayuno complementario a los alojamientos en las habitaciones.<br>
+Origen restaurante cuenta con un delicioso  y variado menú tanto para almuerzo como para comida, donde es posible encontrar un almuerzo completo, variedades de carnes y hamburguesas.</h6>
+    </div>
+    <div class="w3-col l8 12">
+      <!-- Image of location/map -->
+      <img src="../images/fondo.jpg" class="w3-image w3-greyscale" style="width:100%;">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+    <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> Calle 65A # 23B - 24, Manizales - Colombia</div>
+    <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> +57 314 869 1413 - (6) 872 9757</div>
+    <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> origenfood@gmail.com</div>
+  </div>
+
+  <div class="w3-panel w3-red w3-leftbar w3-padding-32">
+    <h6><i class="fa fa-info w3-deep-orange w3-padding w3-margin-right"></i> Contamos con un grato estar de café, y servicio de netflix en la sala general. Estamos estableciendo convenios con agencias de turismo para ofrecer un acompañamiento completo a nuestros huéspedes.</h6>
+  </div>
+
+  <!--<div class="w3-container">
+    <h3>Our Hotels</h3>
+    <h6>You can find our hotels anywhere in the world:</h6>
+  </div>
+
+  <div class="w3-row-padding w3-padding-16 w3-text-white w3-large">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="/w3images/cinqueterre.jpg" alt="Cinque Terre" style="width:100%">
+        <span class="w3-display-bottomleft w3-padding">Cinque Terre</span>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="/w3images/newyork2.jpg" alt="New York" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">New York</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">San Francisco</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="/w3images/pisa.jpg" alt="Pisa" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Pisa</span>
+          </div>
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-display-container">
+            <img src="/w3images/paris.jpg" alt="Paris" style="width:100%">
+            <span class="w3-display-bottomleft w3-padding">Paris</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-32 w3-black w3-opacity w3-card w3-hover-opacity-off" style="margin:32px 0;">
+    <h2>Get the best offers first!</h2>
+    <p>Join our newsletter.</p>
+    <label>E-mail</label>
+    <input class="w3-input w3-border" type="text" placeholder="Your Email address">
+    <button type="button" class="w3-button w3-red w3-margin-top">Subscribe</button>
+  </div>-->
+
+  <div class="w3-container" id="contact">
+    <h2>Contacto</h2>
+    <p>Si tienes alguna duda, no dudes en preguntar.</p>
+    <i class="fa fa-map-marker w3-text-red" style="width:30px"></i> Manizales - Colombia<br>
+    <i class="fa fa-phone w3-text-red" style="width:30px"></i> +57 314 869 1413 - (6) 872 9757<br>
+    <i class="fa fa-envelope w3-text-red" style="width:30px"> </i> origenfood@gmail.com<br>
+    <p><a target="_blank" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=origenfood@gmail.com&amp;su=Quiero+Mas+Informacion">
+      <button class="w3-button w3-black w3-padding-large">ENVIAR MENSAJE</button></a></p>
+
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+  <h5>Síguenos!</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <a target="_blank" href="https://www.facebook.com/origenfood"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a target="_blank" href="https://www.instagram.com/origenfoodmanizales/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+<script src="../scripts/script.js"></script>
+
+</body>
+</html>
