@@ -23,13 +23,14 @@
 <div class="w3-bar w3-white w3-large">
   <a href="#" class="w3-bar-item w3-button w3-red w3-mobile">Inicio</a>
   <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Habitaciones</a>
+  <a href="#carta" class="w3-bar-item w3-button w3-mobile">Restaurante</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">Nosotros</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contacto</a>
   <a href="#reserva" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Reservar Ahora</a>
 </div>
 <!-- Header -->
 <header id="header" class="w3-display-container w3-content" style="max-width:1500px;">
-  <img class="w3-image" src="../images/fondo.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
+  <img class="w3-image" src="../images/fondo.jpg" alt="The Hotel" style="width: 100%; min-height: 400px;">
   <div id="reserva" class="w3-display-left w3-padding w3-col l6 m8">
     <div class="w3-container w3-red">
       <h2><img style="width: 20%;" src="../images/logo.png"></img>Origen Hostal</h2>
@@ -48,6 +49,8 @@
       <button class="w3-button w3-dark-grey" onclick="consultarDisponibilidad()"><i class="fa fa-search w3-margin-right"></i>Ver disponibilidad</button>
     </div>
   </div>
+  <a href="#header"><button style="position: fixed; z-index: 99;" class="w3-margin w3-button w3-black w3-display-bottomright">&#9650;</button></a>
+
 </header>
 
 <!-- Page content -->
@@ -88,9 +91,6 @@
         <img class="mySlidesDoble" src="../images/doble/3.jpg" style="width:100%">
         <img class="mySlidesDoble" src="../images/doble/4.jpg" style="width:100%">
         <img class="mySlidesDoble" src="../images/doble/5.jpg" style="width:100%">
-        <img class="mySlidesDoble" src="../images/doble/6.jpg" style="width:100%">
-        <img class="mySlidesDoble" src="../images/doble/7.jpg" style="width:100%">
-        <img class="mySlidesDoble" src="../images/doble/8.jpg" style="width:100%">
 
         <button class="w3-button w3-black w3-display-left" onclick="plusDivsDbl(-1)">&#10094;</button>
         <button class="w3-button w3-black w3-display-right" onclick="plusDivsDbl(1)">&#10095;</button>
@@ -115,14 +115,6 @@
         <img class="mySlidesTriple" src="../images/triple/3.jpg" style="width:100%">
         <img class="mySlidesTriple" src="../images/triple/4.jpg" style="width:100%">
         <img class="mySlidesTriple" src="../images/triple/5.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/6.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/7.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/8.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/9.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/10.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/11.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/12.jpg" style="width:100%">
-        <img class="mySlidesTriple" src="../images/triple/13.jpg" style="width:100%">
 
         <button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
         <button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
@@ -146,12 +138,6 @@
         <img class="mySlides4" src="../images/multiple/3.jpg" style="width:100%">
         <img class="mySlides4" src="../images/multiple/4.jpg" style="width:100%">
         <img class="mySlides4" src="../images/multiple/5.jpg" style="width:100%">
-        <img class="mySlides4" src="../images/multiple/6.jpg" style="width:100%">
-        <img class="mySlides4" src="../images/multiple/7.jpg" style="width:100%">
-        <img class="mySlides4" src="../images/multiple/8.jpg" style="width:100%">
-        <img class="mySlides4" src="../images/multiple/9.jpg" style="width:100%">
-        <img class="mySlides4" src="../images/multiple/10.jpg" style="width:100%">
-        <img class="mySlides4" src="../images/multiple/11.jpg" style="width:100%">
 
         <button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
         <button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
@@ -168,15 +154,132 @@
     </div>
   </div>
 
+  <div id="carta" class="w3-content" style="max-width:1532px;">
+
+    <div class="w3-container w3-margin-top">
+      <h3>Restaurante</h3>
+    </div>
+
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-third w3-margin-bottom">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides5" src="../images/almuerzos/1.jpg" style="width:100%; display: block;">
+          <img class="mySlides5" src="../images/almuerzos/2.jpg" style="width:100%">
+          <img class="mySlides5" src="../images/almuerzos/3.jpg" style="width:100%">
+          <img class="mySlides5" src="../images/almuerzos/4.jpg" style="width:100%">
+          <img class="mySlides5" src="../images/almuerzos/5.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs5(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs5(1)">&#10095;</button>
+        </div>
+
+        <div class="w3-container w3-white">
+          <h3>Almuerzos</h3>
+          <h6 class="w3-opacity">Deliciosos platos tradicionales locales.</h6>
+          <p>Tu mejor opción al medio día</p>
+          <a href="../images/menu.pdf" target="_blank"><button class="w3-button w3-block w3-black w3-margin-bottom">Consulta nuestra carta</button></a>
+
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides6" src="../images/carta/1.jpg" style="width:100%; display: block;">
+          <img class="mySlides6" src="../images/carta/2.jpg" style="width:100%">
+          <img class="mySlides6" src="../images/carta/3.jpg" style="width:100%">
+          <img class="mySlides6" src="../images/carta/4.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs6(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs6(1)">&#10095;</button>
+        </div>
+
+        <div class="w3-container w3-white">
+          <h3>Carta</h3>
+          <h6 class="w3-opacity">Atrévete a experimentar nuevos sabores y fusiones.</h6>
+          <p>Una explosión en tu paladar</p>
+          <a href="../images/menu.pdf" target="_blank"><button class="w3-button w3-block w3-black w3-margin-bottom">Consulta nuestra carta</button></a>
+
+
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides7" src="../images/entradas/1.jpg" style="width:100%; display: block;">
+          <img class="mySlides7" src="../images/entradas/2.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs7(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs7(1)">&#10095;</button>
+        </div>
+
+        <div class="w3-container w3-white">
+          <h3>Entradas</h3>
+          <h6 class="w3-opacity">toda buen experiencia comienza con una buena entrada.</h6>
+          <p>Para compartir y disfrutar</p>
+          <a href="../images/menu.pdf" target="_blank"><button class="w3-button w3-block w3-black w3-margin-bottom">Consulta nuestra carta</button></a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-half w3-margin-bottom">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides8" src="../images/hamburguesas/1.jpg" style="width:100%; display: block;">
+          <img class="mySlides8" src="../images/hamburguesas/2.jpg" style="width:100%">
+          <img class="mySlides8" src="../images/hamburguesas/3.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs8(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs8(1)">&#10095;</button>
+        </div>
+
+        <div class="w3-container w3-white">
+          <h3>Hamburguesas</h3>
+          <h6 class="w3-opacity">Descubre nuevos sabores jugosamente caldenses.</h6>
+          <p>Las mejores hamburguesas del sector</p>
+          <a href="../images/menu.pdf" target="_blank"><button class="w3-button w3-block w3-black w3-margin-bottom">Consulta nuestra carta</button></a>
+
+        </div>
+      </div>
+
+      <div class="w3-half w3-margin-bottom">
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides9" src="../images/sanduches/1.jpg" style="width:100%; display: block;">
+          <img class="mySlides9" src="../images/sanduches/2.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs9(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs9(1)">&#10095;</button>
+        </div>
+
+        <div class="w3-container w3-white">
+          <h3>Sandwiches</h3>
+          <h6 class="w3-opacity">Un sandwich diferente, un sandwich con sabor criollo.</h6>
+          <p>Tu paladar nunca lo olvidará</p>
+          <a href="../images/menu.pdf" target="_blank"><button class="w3-button w3-block w3-black w3-margin-bottom">Consulta nuestra carta</button></a>
+
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
   <div class="w3-row-padding" id="about">
-    <div class="w3-col l4 12">
+    <div class="w3-col">
       <h3>Nuestro Hostal</h3>
       <h6>Origen es un lugar confortable en pleno corazón de dinámicas universitarias y familiares de la ciudad de Manizales, localizados en el barrio Palermo contamos con una amplia variedad de acomodaciones todas pensadas para ofrecer espacios cómodos y tranquilos para su descanso. Adicionalmente origen Hostal se encuentra acompañado por Origen Restaurante, por tal motivo siempre está abierto el servicio de desayuno complementario a los alojamientos en las habitaciones.<br>
 Origen restaurante cuenta con un delicioso  y variado menú tanto para almuerzo como para comida, donde es posible encontrar un almuerzo completo, variedades de carnes y hamburguesas.</h6>
     </div>
-    <div class="w3-col l8 12">
-      <!-- Image of location/map -->
-      <img src="../images/fondo.jpg" class="w3-image w3-greyscale" style="width:100%;">
+    <div class="w3-col">
+      <!-- Image of location/map
+      <img src="../images/fondo.jpg" class="w3-image w3-greyscale" style="width:100%;"> -->
+      <iframe class="w3-half" width='640' height='360' src='https://roundme.com/embed/399624/1390151' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe class="w3-half" width='640' height='360' src='https://roundme.com/embed/398866/1387207' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
   </div>
 
